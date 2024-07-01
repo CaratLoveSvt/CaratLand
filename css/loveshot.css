@@ -1,0 +1,40 @@
+
+:root{
+    --pri: #2222;
+    --accent:#be0000;
+  }
+  
+  .progress{
+    background: var(--accent);
+  }
+  .action-btn:hover{
+    color: var(--accent);
+  }
+
+   /*nav-bar*/
+   nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }

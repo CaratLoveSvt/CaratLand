@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVT - 4th Full Album</title>
+    <link rel="stylesheet" href="./css/allalbum.css">
+    <link rel="shortcut icon" href="./cover/SeventeenLogo.jpg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+
+    <div id="progress">
+        <span id="progress-value"></span>
+    </div>
+    
+    <nav class="navigation">
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+        <a href="./carat.html" class="logo">Carat<span>Land</span></a>
+        <ul class="menu">
+            <li><a href="./carat.html">HOME</a></li>
+            <li><a href="./Seventeenbar.html">SEVENTEEN</a></li>
+            <li><a href="./carat.html">ALBUMS</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="sidebar">
+      <button id="x-sidebar">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+      </button>
+    </button>
+  </button>
+  <button id="song-select" class="action-btn">Darl+ing</button>
+  <button id="song-select" class="action-btn">HOT</button>
+  <button id="song-select" class="action-btn">DON QUIXOTE</button>
+  <button id="song-select" class="action-btn">Domino</button>
+  <button id="song-select" class="action-btn">Shodow</button>
+    </div>
+    
+    
+    <div class="player">
+
+      <div class="display">
+        <img class="disc" src="./cover/cover24.jpg" alt="">
+      </div>
+
+      <audio src="" id="audio"></audio>
+
+      <div class="info">
+        <img id="cover" src="" alt="">
+  
+        <div class="nav-bar">
+          <div id="title"></div>
+          <div class="progress-cont">
+            <div class="progress"></div>
+            <p id="currentTime"></p>
+          </div>
+  
+          <div class="controls">
+            <button id="prev" class="action-btn">
+              <i class="fa fa-backward" aria-hidden="true"></i>
+            </button>
+  
+            <button id="play" class="action-btn big">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
+  
+            <button id="next" class="action-btn">
+              <i class="fa fa-forward" aria-hidden="true"></i>
+            </button>
+  
+            <button id="list" class="action-btn">
+              <i class="fa fa-list-ul" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/musicPlayer.js"></script>
+    <script src="./js/4fullalbum.js"></script>
+
+    <footer>
+      <a href="./carat.html" class="logo">Carat<span>Land</span></a>
+      <span class="copyright">Copyright © 2024 · CaratduelSVT<br>
+          All Rights Reserved · Privacy Policy</span>
+    </footer>
+
+    <script>
+      setInterval(() => {
+          const loader = document.querySelector('.loader');
+          if (loader) {
+              loader.classList.add('hidden');
+          } else {
+              console.error('Element with class "loader" not found.');
+          }
+      }, 3000);
+  </script>
+  
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script>
+        let scrollPrecentage = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round(pos * 100 / calcHeight);
+            scrollProgress.style.background = `conic-gradient(#c3a1da ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
+        }
+        window.onscroll = scrollPrecentage;
+        window.onload = scrollPrecentage;
+
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 20){
+                $('.navigation').addClass('fix-icon');
+            }
+            else{
+                $('.navigation').removeClass('fix-icon');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+

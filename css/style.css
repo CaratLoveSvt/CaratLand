@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: rgb(19, 194, 19);
+  }
+
+  /*--Famous Album*/
+#F-album{
+  max-width: 1000%;
+  margin: 10px auto;
+  width: 90%;
+}
+.F-album-heading h1{
+  color: rgb(33, 230, 26);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+  .wrapper{
+    background: black;
+    min-height: 100vh;
+  }
+  .flex{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .albums{
+    padding: 25px;
+  }
+  .albums a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+  }
+  .albums a .overlay{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #000;
+    border: 1px solid white;
+    padding: 3px;
+    text-align: center;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: .5s ease;
+  }
+  .albums a:hover .overlay{
+    transform: scaleY(1);
+  }
+  .albums a img{
+    border: 1px solid #fff;
+    height: 200px;
+    width: 200px;
+  }
+  .youtube-vids{
+    padding: 30px;
+  }
+  .wrapper{
+    background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,0.9)), url('../photo1.jpg') center;
+    background-size: cover;
+    padding: 10px;
+  }
+  h1#title{
+    font-size: 8rem;
+    color: rgb(19, 194, 19);
+    margin: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+  }
+  h1#title span{
+    display: block;
+    font-size: 2rem;
+  }
+  @media (max-width: 620px){
+    h1#title{
+      font-size: 5rem;
+    }
+  }
+  
+  /*--Latest-Music*/
+#latest{
+  max-width: 1000%;
+  margin: 10px auto;
+  width: 90%;
+}
+.latest-heading h1{
+  color: rgb(33, 230, 26);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+  
+  /* LOADER */
+  .loader{
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    transition: .5s ease;
+  }
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(33, 230, 26);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  .hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+  /*FOOTER*/
+footer{
+  background-color: #2d2d2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+footer .copyright{
+  color: #7a77774d;
+  font-size: 0.9rem;
+}
+footer .logo{
+  color: rgb(33, 230, 26);;
+  margin: 0px;
+  font-size: 2rem;
+  font-weight: 400;
+}
